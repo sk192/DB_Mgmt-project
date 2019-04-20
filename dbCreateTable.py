@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# CS 587 Project Part I
 
 import psycopg2 
 
@@ -19,11 +20,11 @@ def create_tables():
         cur = conn.cursor()
         commands = (
 
-            """ CREATE table table1 (unique1 int UNIQUE, unique2 serial primary key, two int, four int,ten int,twenty int,onePercent int,
+            """ CREATE table ONEKTUP (unique1 int UNIQUE, unique2 serial primary key, two int, four int,ten int,twenty int,onePercent int,
                     tenPercent int,fiftyPercent int,unique3 int UNIQUE , evenOnePercent int, oddOnePercent int, stringu1 varchar(60) Unique, stringu2 varchar(60) unique, string4 varchar(60))""",
-            """ CREATE table table2 (unique1 int UNIQUE, unique2 serial primary key, two int, four int,ten int,twenty int,onePercent int,
+            """ CREATE table TENKTUP1 (unique1 int UNIQUE, unique2 serial primary key, two int, four int,ten int,twenty int,onePercent int,
                     tenPercent int,fiftyPercent int,unique3 int UNIQUE , evenOnePercent int, oddOnePercent int, stringu1 varchar(60) Unique, stringu2 varchar(60) unique,  string4 varchar(60)) """, 
-            """ CREATE table table3 (unique1 int UNIQUE, unique2 serial primary key, two int, four int,ten int,twenty int,onePercent int,
+            """ CREATE table TENKTUP2 (unique1 int UNIQUE, unique2 serial primary key, two int, four int,ten int,twenty int,onePercent int,
                     tenPercent int,fiftyPercent int,unique3 int UNIQUE , evenOnePercent int, oddOnePercent int, stringu1 varchar(60) Unique, stringu2 varchar(60) unique, string4 varchar(60)) """
             )
         for command in commands:
@@ -36,7 +37,7 @@ def create_tables():
         if conn is not None:
             conn.close()
 
-def generate_data_for_table1(n):
+def generate_data_for_ONEKTUP(n):
     
     conn = None
     try:
@@ -76,7 +77,7 @@ def generate_data_for_table1(n):
             stringu2 = convertIDToString(unique2)
             z = string4_generate(n)
             string4 = z[i]
-            insert_data = """ INSERT INTO table1 (unique1, unique2,two,four,ten,twenty,onePercent,tenPercent,fiftyPercent,unique3, evenOnePercent, oddOnePercent, stringu1, stringu2, string4) values (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) """      #---second step insert data
+            insert_data = """ INSERT INTO ONEKTUP (unique1, unique2,two,four,ten,twenty,onePercent,tenPercent,fiftyPercent,unique3, evenOnePercent, oddOnePercent, stringu1, stringu2, string4) values (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) """      #---second step insert data
             data = (unique1, unique2, two,four,ten,twenty,onePercent,tenPercent,fiftyPercent,unique3, evenOnePercent, oddOnePercent, stringu1, stringu2, string4)
             cur2.execute(insert_data, data)
         cur2.close()                          # Close communication with postgresql server 
@@ -88,7 +89,7 @@ def generate_data_for_table1(n):
             conn.close()
 
 
-def generate_data_for_table2(m):
+def generate_data_for_TENKTUP1(m):
 
     conn = None
     try:
@@ -127,7 +128,7 @@ def generate_data_for_table2(m):
             stringu2 = convertIDToString(unique2)
             z = string4_generate(m)
             string4 = z[i]
-            insert_data = """ INSERT INTO table2 (unique1, unique2,two,four,ten,twenty,onePercent,tenPercent,fiftyPercent,unique3, evenOnePercent, oddOnePercent, stringu1, stringu2, string4) values (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) """     #---second step insert data
+            insert_data = """ INSERT INTO TENKTUP1 (unique1, unique2,two,four,ten,twenty,onePercent,tenPercent,fiftyPercent,unique3, evenOnePercent, oddOnePercent, stringu1, stringu2, string4) values (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) """     #---second step insert data
             data = (unique1, unique2, two,four,ten,twenty,onePercent,tenPercent,fiftyPercent,unique3, evenOnePercent, oddOnePercent, stringu1, stringu2, string4)
             cur1.execute(insert_data, data)
         cur1.close()            # Close communication with postgresql server 
@@ -137,7 +138,7 @@ def generate_data_for_table2(m):
     finally:
         if conn is not None:
             conn.close()
-def generate_data_for_table3(o):
+def generate_data_for_TENKTUP2(o):
 
     conn = None
     try:
@@ -177,7 +178,7 @@ def generate_data_for_table3(o):
             stringu2 = convertIDToString(unique2)
             z = string4_generate(o)
             string4 = z[h]
-            insert_data = """ INSERT INTO table3 (unique1, unique2,two,four,ten,twenty,onePercent,tenPercent,fiftyPercent,unique3, evenOnePercent, oddOnePercent, stringu1, stringu2, string4) values (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) """     #---second step insert data
+            insert_data = """ INSERT INTO TENKTUP2 (unique1, unique2,two,four,ten,twenty,onePercent,tenPercent,fiftyPercent,unique3, evenOnePercent, oddOnePercent, stringu1, stringu2, string4) values (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) """     #---second step insert data
             data = (unique1, unique2, two,four,ten,twenty,onePercent,tenPercent,fiftyPercent,unique3, evenOnePercent, oddOnePercent, stringu1, stringu2, string4)
             cur3.execute(insert_data, data)
         cur3.close()            # Close communication with postgresql server 
@@ -225,12 +226,12 @@ if __name__ == '__main__':
 
     create_tables()
 
-    n = int(input("Enter number of rows for table 1: "))
-    m = int(input("Enter number of rows for table 2: "))  
-    o = int(input("Enter number of rows for table 3: "))
-    generate_data_for_table1(n)
-    generate_data_for_table2(m)
-    generate_data_for_table3(o)
+    n = int(input("Enter number of rows for ONEKTUP: "))
+    m = int(input("Enter number of rows for TENKTUP1: "))  
+    o = int(input("Enter number of rows for TENKTUP2: "))
+    generate_data_for_ONEKTUP(n)
+    generate_data_for_TENKTUP1(m)
+    generate_data_for_TENKTUP2(o)
     
 
 
