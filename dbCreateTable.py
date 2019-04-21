@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# CS 587 Project Part I
+# CS 587 Project Part I 
 
 import psycopg2 
 
