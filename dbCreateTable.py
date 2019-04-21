@@ -204,7 +204,7 @@ def convertIDToString(id):
         
     for j in range(i+1,7):
         result[j] = temp[j]
-    for i in range(7, 53):
+    for i in range(7, 52):
         result.append('x')
     q = ''.join(result)
     return q
