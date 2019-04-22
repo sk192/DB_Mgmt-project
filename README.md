@@ -2,8 +2,8 @@
 README
 
 ## Members
-Divya Sravani Vukkusila
-Shweta Korulkar
+- Divya Sravani Vukkusila
+- Shweta Korulkar
 
 ### Description:-
 We are developing a utility to data population for a Database Benchmark as recommended in “The Wisconsin Benchmark: Past, Present, and Future - David J. DeWitt, Computer Sciences Department, University of Wisconsin” . 
@@ -43,13 +43,13 @@ https://github.com/sk192/DB_Mgmt-project/blob/master/Data/
 ### Lessons learned:-
 
 
-On complex work-loads, PostgreSQL will be faster, but on simple primary key lookups MySQL with InnoDB will be faster.
+- On complex work-loads, PostgreSQL will be faster, but on simple primary key lookups MySQL with InnoDB will be faster.
 
 ### References:-
-The Wisconsin Benchmark: Past, Present, and Future - David J. DeWitt, Computer Sciences Department, University of Wisconsin
-Portland State University CS 587 course material
-www.python.org
-www.postgresql.org
-www.postgresqltutorial.com
-wiki.postgresql.org/wiki/Python
+- The Wisconsin Benchmark: Past, Present, and Future - David J. DeWitt, Computer Sciences Department, University of Wisconsin
+- Portland State University CS 587 course material
+- www.python.org
+- www.postgresql.org
+- www.postgresqltutorial.com
+- wiki.postgresql.org/wiki/Python
 
