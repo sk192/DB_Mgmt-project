@@ -12,25 +12,24 @@ In a nutshell, we would be populating ONEKTUP, TENKTUP1  and  TENKTUP2 tables.  
 
 ``` text
 CREATE TABLE TENKTUP1
-( unique1 integer NOT NULL,			// random, 0 - (MAXTUPLES - 1)
-  unique2 integer NOT NULL PRIMARY KEY,// sequential numbers
-  two integer NOT NULL,			// unique1 mod 2
-  four integer NOT NULL,			// unique1 mod 4
-  ten integer NOT NULL,			// unique1 mod 10
-  twenty integer NOT NULL,			// unique1 mod 20
-  onePercent integer NOT NULL,		// unique1 mod 100
-  tenPercent integer NOT NULL,		// unique1 mod 10
-  twentyPercent integer NOT NULL,	// unique1 mod 5
-  fiftyPercent integer NOT NULL,		// unique1 mod 2
-  unique3 integer NOT NULL,			// unique1
-  evenOnePercent integer NOT NULL,	// (onePercent * 2)
-  oddOnePercent integer NOT NULL,	// (onePercent * 2) + 1
-  stringu1 char(52) NOT NULL,		// convertIDToString(unique1)
-  stringu2 char(52) NOT NULL,		// convertIDToString(unique2)
-  string4 char(52) NOT NULL			// {A|H|O|V}*4 + x * 45
+( unique1 integer NOT NULL,			                  // random, 0 - (MAXTUPLES - 1)
+  unique2 integer NOT NULL PRIMARY KEY,           // sequential numbers
+  two integer NOT NULL,			                      // unique1 mod 2
+  four integer NOT NULL,			                    // unique1 mod 4
+  ten integer NOT NULL,			                      // unique1 mod 10
+  twenty integer NOT NULL,			                  // unique1 mod 20
+  onePercent integer NOT NULL,		                // unique1 mod 100
+  tenPercent integer NOT NULL,		                // unique1 mod 10
+  twentyPercent integer NOT NULL,	                // unique1 mod 5
+  fiftyPercent integer NOT NULL,		              // unique1 mod 2
+  unique3 integer NOT NULL,			                  // unique1
+  evenOnePercent integer NOT NULL,	              // (onePercent * 2)
+  oddOnePercent integer NOT NULL,	                // (onePercent * 2) + 1
+  stringu1 char(52) NOT NULL,		                  // convertIDToString(unique1)
+  stringu2 char(52) NOT NULL,		                  // convertIDToString(unique2)
+  string4 char(52) NOT NULL			                  // {A|H|O|V}*4 + x * 45
 )
-// convertIDToString(u: Integer) returns a string output is 
-// based on the algorithm shared in the article.
+// convertIDToString(u: Integer) returns a string output is based on the algorithm shared in the article.
 ```
 
 ### DB of choice:-
