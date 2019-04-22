@@ -10,6 +10,7 @@ We are developing a utility to data population for a Database Benchmark as recom
 
 In a nutshell, we would be populating ONEKTUP, TENKTUP1  and  TENKTUP2 tables.  All of three tables with similar column structure and relations as below:-
 
+``` text
 CREATE TABLE TENKTUP1
 ( unique1 integer NOT NULL,			// random, 0 - (MAXTUPLES - 1)
   unique2 integer NOT NULL PRIMARY KEY,// sequential numbers
@@ -30,7 +31,7 @@ CREATE TABLE TENKTUP1
 )
 // convertIDToString(u: Integer) returns a string output is 
 // based on the algorithm shared in the article.
-
+```
 
 ### DB of choice:-
 We chose to evaluate the script to populate on our local instance of PostGres Database. Due to our familiarity with PostGres local installation, interactions and diagnosis, we chose this option. With local Instance, we would have all the flexibility over tuning or controlling all the aspects of the DB compared to a cloud hosted or a remotely hosted PostGres. And Postgres provides better language support for Python and flexibility for user defined data types for any complex computation to be foreseen.
