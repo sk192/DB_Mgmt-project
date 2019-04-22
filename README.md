@@ -5,8 +5,8 @@ README
 - Divya Sravani Vukkusila
 - Shweta Korulkar
 
-### Description:-
-We are developing a utility to data population for a Database Benchmark as recommended in “The Wisconsin Benchmark: Past, Present, and Future - David J. DeWitt, Computer Sciences Department, University of Wisconsin” . 
+### Description
+We are developing a utility to data population for a Database Benchmark as recommended in “The Wisconsin Benchmark: Past, Present, and Future - David J. DeWitt, Computer Sciences Department, University of Wisconsin”. This utility comprises of a python script dbCreateTable.py to create table and populate sample data into the database.
 
 In a nutshell, we would be populating ONEKTUP, TENKTUP1  and  TENKTUP2 tables.  All of three tables with similar column structure and relations as below:-
 
@@ -32,20 +32,20 @@ CREATE TABLE TENKTUP1
 // convertIDToString(u: Integer) returns a string output is based on the algorithm shared in the article.
 ```
 
-### DB of choice:-
+### DB of choice
 We chose to evaluate the script to populate on our local instance of PostGres Database. Due to our familiarity with PostGres local installation, interactions and diagnosis, we chose this option. With local Instance, we would have all the flexibility over tuning or controlling all the aspects of the DB compared to a cloud hosted or a remotely hosted PostGres. And Postgres provides better language support for Python and flexibility for user defined data types for any complex computation to be foreseen.
 
 
-### Demonstration:-
+### Demonstration
 We had populate 1000 rows for ONEKTUP table, 10000 rows for TENKTUP1, 10000 rows for TENKTUP2 and exported a sample of 50 rows for each table to csv files hosted at 
 https://github.com/sk192/DB_Mgmt-project/blob/master/Data/ 
 
-### Lessons learned:-
+### Lessons learned
 
 
 - On complex work-loads, PostgreSQL will be faster, but on simple primary key lookups MySQL with InnoDB will be faster.
 
-### References:-
+### References
 - The Wisconsin Benchmark: Past, Present, and Future - David J. DeWitt, Computer Sciences Department, University of Wisconsin
 - Portland State University CS 587 course material
 - www.python.org
