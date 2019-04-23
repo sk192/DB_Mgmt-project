@@ -42,7 +42,8 @@ https://github.com/sk192/DB_Mgmt-project/blob/master/Data/
 
 ### Lessons learned
 
-
+- Data generation through scripting.
+- Analysis of Database Techniques through Benchmark provided.
 - On complex work-loads, PostgreSQL will be faster, but on simple primary key lookups MySQL with InnoDB will be faster.
 
 ### References
