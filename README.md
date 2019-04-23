@@ -1,9 +1,11 @@
 # Database Management System Implementation Project
-README
 
-## Members
+### Members
 - Divya Sravani Vukkusila
 - Shweta Korulkar
+
+### To Run
+python dbCreateTable.py
 
 ### Description
 We are developing a utility to data population for a Database Benchmark as recommended in “The Wisconsin Benchmark: Past, Present, and Future - David J. DeWitt, Computer Sciences Department, University of Wisconsin”. This utility comprises of a python script dbCreateTable.py to create table and populate sample data into the database.
